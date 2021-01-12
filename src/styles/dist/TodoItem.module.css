@@ -5,7 +5,14 @@
   font-size: 20px;
   border-bottom: 1px solid #000;
 }
-
-.completed {
+.wrapper .completed {
   text-decoration: line-through;
+}
+.wrapper .lightgreen {
+  background-color: #64ecbc;
+  border: 1px solid #818181;
+}
+.wrapper .lightred {
+  background-color: #ff9191;
+  border: 1px solid #818181;
 }

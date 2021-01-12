@@ -2,3 +2,7 @@
   padding: 100px;
   background-color: #e3ad20;
 }
+.wrapper button {
+  border-radius: 5px;
+  border: none;
+}

@@ -11,12 +11,16 @@ const TodoItem = props => {
         props.completeTodo(props.id);
     }
 
+    let uncompleteTodo = () => {
+        props.uncompleteTodo(props.id)
+    }
+
 
     return (
         <div className={s.wrapper}>
             <div className={isCompleted()}>{props.text}</div>
             {
-                props.completed ? <div>Выполнено!</div> : <button onClick={completeTodo}>Выполнить</button>
+                props.completed ? <button className={s.lightgreen} onClick={uncompleteTodo}>Выполнено!</button> : <button className={s.lightred} onClick={completeTodo}>Выполнить</button>
             }
         </div>
     )

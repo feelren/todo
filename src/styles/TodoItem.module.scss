@@ -1,12 +1,21 @@
 .wrapper {
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    border-bottom: 1px solid #000;
-}
+	padding: 30px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
+	border-bottom: 1px solid #000;
 
+	.completed {
+		text-decoration: line-through;
+	}
 
-.completed {
-    text-decoration: line-through;
+	.lightgreen {
+		background-color: #64ecbc;
+		border: 1px solid #818181;
+	}
+
+	.lightred {
+		background-color: #ff9191;
+		border: 1px solid #818181;
+	}
 }

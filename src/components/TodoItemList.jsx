@@ -7,13 +7,14 @@ const TodoItemList = props => {
 
     let todoList = props.todos.map(todo => {
         return (
-            <TodoItem key={todo.id} id={todo.id} text={todo.text} completed={todo.completed} completeTodo={props.completeTodo} />
+            <TodoItem key={todo.id} id={todo.id} text={todo.text} completed={todo.completed} uncompleteTodo={props.uncompleteTodo} completeTodo={props.completeTodo} />
         )
     })
 
     return (
         <div className={s.wrapper}>
             {todoList}
+            <button className={s.uncomplete_button} onClick={props.uncompleteAll}>Сделать все невыполненным!</button>
         </div>
     )
 };
