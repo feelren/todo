@@ -1,0 +1,12 @@
+.wrapper {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    border-bottom: 1px solid #000;
+}
+
+
+.completed {
+    text-decoration: line-through;
+}

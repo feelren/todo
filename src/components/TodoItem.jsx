@@ -1,0 +1,25 @@
+import React from "react";
+import s from '../styles/dist/TodoItem.module.css'
+
+
+const TodoItem = props => {
+    let isCompleted = () => {
+        if (props.completed === true) return s.completed;
+    }
+
+    let completeTodo = () => {
+        props.completeTodo(props.id);
+    }
+
+
+    return (
+        <div className={s.wrapper}>
+            <div className={isCompleted()}>{props.text}</div>
+            {
+                props.completed ? <div>Выполнено!</div> : <button onClick={completeTodo}>Выполнить</button>
+            }
+        </div>
+    )
+};
+
+export default TodoItem;
