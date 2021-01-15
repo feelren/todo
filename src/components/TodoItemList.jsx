@@ -5,16 +5,27 @@ import TodoItem from "./TodoItem";
 
 const TodoItemList = props => {
 
-    let todoList = props.todos.map(todo => {
-        return (
-            <TodoItem key={todo.id} id={todo.id} text={todo.text} completed={todo.completed} uncompleteTodo={props.uncompleteTodo} completeTodo={props.completeTodo} />
-        )
+    let itemArray = [];
+
+    props.todos.forEach(todo => {
+        if (props.filter === 'all') {
+            itemArray.push(
+                <TodoItem key={todo.id} id={todo.id} text={todo.text} removeTodo={props.removeTodo} completed={todo.completed} toggleCompleting={props.toggleCompleting} />
+            )
+        } else if (props.filter === 'completed' && todo.completed) {
+            itemArray.push(
+                <TodoItem key={todo.id} id={todo.id} text={todo.text} removeTodo={props.removeTodo} completed={todo.completed} toggleCompleting={props.toggleCompleting} />
+            )
+        } else if (props.filter === 'uncompleted' && !todo.completed) {
+            itemArray.push(
+                <TodoItem key={todo.id} id={todo.id} text={todo.text} removeTodo={props.removeTodo} completed={todo.completed} toggleCompleting={props.toggleCompleting} />
+            )
+        }
     })
 
     return (
         <div className={s.wrapper}>
-            {todoList}
-            <button className={s.uncomplete_button} onClick={props.uncompleteAll}>Сделать все невыполненным!</button>
+            {itemArray}
         </div>
     )
 };

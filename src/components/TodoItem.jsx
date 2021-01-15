@@ -7,22 +7,24 @@ const TodoItem = props => {
         if (props.completed === true) return s.completed;
     }
 
-    let completeTodo = () => {
-        props.completeTodo(props.id);
+    let toggleCompleting = (id) => {
+        props.toggleCompleting(id)
     }
 
-    let uncompleteTodo = () => {
-        props.uncompleteTodo(props.id)
+    let removeTodo = () => {
+        props.removeTodo(props.id)
+
     }
 
 
     return (
-        <div className={s.wrapper}>
-            <div className={isCompleted()}>{props.text}</div>
-            {
-                props.completed ? <button className={s.lightgreen} onClick={uncompleteTodo}>Выполнено!</button> : <button className={s.lightred} onClick={completeTodo}>Выполнить</button>
-            }
-        </div>
+        <div className={s.wrapper} onClick={() => (toggleCompleting(props.id))}>
+            <div className={isCompleted() + ' ' + s.name}>{props.text}</div>
+            <div className={s.right}>
+                {props.completed ? <button className={s.lightgreen + ' ' + s.status} >выполнено</button> : <button className={s.lightred + ' ' + s.status} >не выполнено</button>}
+                <div className={s.deleteButton} onClick={removeTodo}>&#10006;</div>
+            </div>
+        </div >
     )
 };
 

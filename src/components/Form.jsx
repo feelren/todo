@@ -13,7 +13,7 @@ const Form = props => {
     return (
         <div className={s.wrapper}>
             <input type="text" placeholder='Что еще добавим..?' ref={input} value={props.inputValue} onChange={changeInputValue} />
-            <button onClick={props.addTodo}>Добавить в список</button>
+            <button className='button' onClick={props.addTodo}>Добавить в список</button>
         </div>
     )
 };

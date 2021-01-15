@@ -1,18 +1,65 @@
 .wrapper {
-  padding: 30px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.wrapper:hover {
+  background-color: #c7cacf;
+}
+.wrapper .name {
   font-size: 20px;
-  border-bottom: 1px solid #000;
+}
+.wrapper .right {
+  display: flex;
+  justify-content: space-between;
+  min-width: 20%;
+}
+.wrapper .right .status {
+  margin-right: 10px;
+  width: 120px;
+  border-radius: 7px;
+  white-space: nowrap;
+}
+.wrapper .right .deleteButton {
+  padding: 5px 10px;
+  border-radius: 7px;
+  color: #ff6666;
+}
+.wrapper .right .deleteButton:hover {
+  background-color: #000;
 }
 .wrapper .completed {
   text-decoration: line-through;
 }
 .wrapper .lightgreen {
-  background-color: #64ecbc;
-  border: 1px solid #818181;
+  background-color: #b9f7e1;
 }
 .wrapper .lightred {
-  background-color: #ff9191;
-  border: 1px solid #818181;
+  background-color: #ffb9b9;
+}
+
+@media (max-width: 564px) {
+  .wrapper {
+    flex-direction: column;
+    text-align: center;
+    background-color: #c7cacf;
+  }
+  .wrapper .name {
+    margin-bottom: 10px;
+  }
+  .wrapper .right {
+    align-items: center;
+    width: 50%;
+  }
+  .wrapper .right .status {
+    padding: 7px;
+  }
+  .wrapper .right .deleteButton {
+    font-size: 30px;
+  }
 }
