@@ -1,0 +1,26 @@
+.wrapper {
+	margin-left: 20px;
+	width: 100%;
+	text-align: center;
+
+	div:last-child {
+		border: 0;
+	}
+}
+
+@media (max-width: 774px) {
+	.wrapper {
+		margin: 0;
+	}
+}
+
+@media (max-width: 564px) {
+	.wrapper {
+		div {
+			margin-bottom: 5px;
+		}
+		div:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

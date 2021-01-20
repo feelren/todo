@@ -1,0 +1,28 @@
+.wrapper {
+  padding: 100px;
+}
+.wrapper button {
+  border-radius: 5px;
+  border: none;
+}
+.wrapper .row {
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  max-width: 1500px;
+}
+
+@media (max-width: 774px) {
+  .wrapper {
+    padding: 10px 20px;
+  }
+  .wrapper .row {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 375px) {
+  .wrapper {
+    padding: 10px 5px;
+  }
+}
