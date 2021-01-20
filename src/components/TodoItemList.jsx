@@ -26,6 +26,9 @@ const TodoItemList = props => {
     return (
         <div className={s.wrapper}>
             {itemArray}
+            <p>
+                *Нажмите на элемент, чтобы выполнить/развыполнить :)
+            </p>
         </div>
     )
 };
