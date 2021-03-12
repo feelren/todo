@@ -1,3 +1,12 @@
+Маленький проект после начала изучения хуков. Используется useState, SCSS
+Реализовано:
+1) Добавление\удаление задач
+2) Выполнение задачи \ отмена выполнения задачи
+3) Фильтрация по признаку выполненности задачи
+4) Индикация "выполненности" для каждой из задач
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
